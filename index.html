@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Erin van der Veen</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="fixed">
+				<div class="navigation">
+					<h2><a href="#ABOUT">ABOUT</a></h2>
+					<h2><a href="#INTERESTS">INTERESTS</a></h2>
+					<h2><a href="#WORK">WORK</a></h2>
+					<h2><a href="#EDUCATION">EDUCATION</a></h2>
+					<h2><a href="#THESIS">THESIS</a></h2>
+					<h2><a href="#DEVELOPMENT">DEVELOPMENT</a></h2>
+					<h2><a href="#HOBBIES">HOBBIES</a></h2>
+					<h2><a href="#CONTACT">CONTACT</a></h2>
+					<h2><a href="#LINKS">LINKS</a></h2>
+				</div>
+			</div>
+			<img src="images/erin.jpg" alt="Erin">
+			<h1 id="ABOUT">ABOUT</h1>
+				My name is Erin, I studied Software Science at the Radboud University in Nijmegen and Ume&aring; University in
+				Ume&aring;. After my studies I stayed in Nijmegen for a while before moving to Stockholm where I now work and live. I live together with my cat, who loves to go on hikes with me.
+			<h1 id="INTERESTS">INTERESTS</h1>
+				<h2>Functional Programming</h2>
+					Functional programming, language design and implementation. I contributed to the Clean programming
+					language, see <a href="https://clean.cs.ru.nl/">the Clean Wiki</a> and <a
+					href="https://en.wikipedia.org/wiki/Clean_(programming_language)">Wikipedia</a>, which
+					is syntactically and semantically much like <a href="https://www.haskell.org/">Haskell</a>.
+					I also contributed to <a href="https://nixos.org/">Nix(pkgs)</a>, and <a href="https://nickel-lang.org">Nickel</a>.
+				<h2>Language Tooling</h2>
+					I love good development tooling. I'm particularly interested in Nix, the Language Server Protocol, and tree-sitter.
+			<h1 id="WORK">WORK</h1>
+			<table>
+				<tr><th>Period</th><th>Company</th><th>Title</th><th>Description</th></tr>
+				<tr><td>2016-2019</td><td>Radboud University</td><td>Teacher Assistant</td><td>Assisting in Bachelor Courses, in
+						particular: Functional Programming, Introduction Cryptography</td></tr>
+				<tr><td>2019-2020</td><td>Radboud University</td><td>Programmer</td><td>Contributing to the BEST
+						project, port the Clean infrastructure to ARM64</td></tr>
+				<tr><td>2020-2021</td><td><a href="https://www.top-software.nl/">TOP Software</a></td><td>Scientific
+						Programmer</td><td>VIIA Developer, LLVM Code Generator for ABC Bytecode</td></tr>
+				<tr><td>2021-</td><td><a href="https://tweag.io/">Tweag I/O</a></td><td>Software Developer</td>
+					<td>
+						Coauthor of the <a href="https://hackage.haskell.org/package/webauthn">WebAuthn</a>
+						Haskell library, contributor to the <a href="https://nickel-lang.org/">Nickel configuration language</a>,
+						project lead of <a href="https://github.com/tweag/topiary">Topiary</a>,
+						project lead of <a href="https://github.com/tweag/nixtact">Nixtract</a> and <a href="https://github.com/tweag/genealogos">Genealogos</a>.
+				</td></tr>
+			</table>
+			<h1 id="EDUCATION">EDUCATION</h1>
+			<table>
+				<tr><th>Period</th><th>School</th><th>Degree</th></tr>
+				<tr><td>2014-2017</td><td>Radboud University</td><td>Bachelor</td></tr>
+				<tr><td>2017-2020</td><td>Radboud University</td><td>Master</td></tr>
+				<tr><td>2019-2019</td><td>Ume&aring; University</td><td>Master</td></tr>
+			</table>
+			<h1 id="THESIS">THESIS</h1>
+				My <a href="documents/thesis.pdf">master thesis</a> explores the idea of using Clean's uniqueness typing
+				system to implement mutable arrays in an embedded DSL (a typical Haskell approach of using a monad would
+				not work because the DSL itself was not monadic). While the run-time system of the DSL (mTask) was
+				successfully modified to accommodate arrays, Clean's uniqueness system was found to be insufficiently
+				powerful. After my thesis was completed, GHC implemented the linear-typing extension. Unfortunately,
+				linear types do not provide a satisfying solution either and would additionally require changes to the
+				design of the DSL.
+			<h1 id="DEVELOPMENT">DEVELOPMENT</h1>
+			For all of my projects see my <a href="https://github.com/ErinvanderVeen">GitHub</a> and <a href="https://gitlab.com/ErinvanderVeen">GitLab</a> pages.
+			A selection of personal favorites:
+			<ul>
+				<li><a href="https://github.com/ErinvanderVeen/Clone">Clone</a>: A program that oversees communication
+					between multiple bots. Was supposed to replace Huginn in for my personal use. Never saw any
+					development after I moved away from hosting my own server.</li>
+				<li><a href="https://github.com/ErinvanderVeen/OOOO">OOOO</a>: A Othello engine written mostly in C.
+					Created for a course at Ume&aring; University.</li>
+				<li><a href="https://gitlab.science.ru.nl/mlubbers/mTask/-/tree/arrays-as-values">mTask</a>: Written and
+					maintained by Mart Lubbers. Was supposed to be extended with arrays for my Master Thesis. I showed
+					instead that Clean's Uniqueness system is not powerful enough to host mutable arrays in an embedded
+					DSL.
+				<li>LLVM Code Generator: An alternative code generator that generators LLVM code from ABC. ABC is the
+					output of the Clean Compiler.</li>
+				<li><a href="https://github.com/tweag/webauthn">WebAuthn</a>: The defacto <a href="https://en.wikipedia.org/wiki/WebAuthn">WebAuthn</a> library for Haskell.</li>
+				<li><a href="https://github.com/tweag/nickel">Nickel</a>: A configuration language aimed at replacing <a href="https://nixos.org/">Nix</a>.</li>
+				<li><a href="https://github.com/tweag/topiary">Topiary</a>: A unform formatter for many languages based on the tree-sitter framework.</li>
+				<li><a href="https://github.com/tweag/genealogos">Genealogos</a>: An SBOM generator for Nix(pkgs).</li>
+			</ul>
+			<h1 id="HOBBIES">HOBBIES</h1>
+			<a href="https://en.wikipedia.org/wiki/Paper_model"><h3>Papercraft</h3></a>
+			I like to make creations like <a href="images/paperdirewolf.png">this</a>.
+			<a href="https://guildwars2.com"><h3>Guild Wars 2</h3></a>
+			I grew up playing Guild Wars, and while I do not play many video games anymore, Guild Wars will always be an
+			important part of my life.
+			<h3>Sailing</h3>
+			My mother taught me to sail in a <a href="https://sailboat.guide/valk-falcon">Valk</a>.
+			Since then I have been very enthousiastic about the freedom it provides and continued learning on my own. First in a Valk, later in a
+			<a href="https://fusionsailboats.co.uk/fusion-pictures/">Fusion</a> and <a href="https://en.wikipedia.org/wiki/Laser_Pico">Laser Pico</a>.
+			<h3>Climbing</h3>
+			I love bouldering with my best friend. We go bouldering about three times a week.
+			<h3>Dungeons and Dragons</h3>
+			I enjoy hosting campaigns in a plethora of campaigns. Currently hosting a Middle Earth and Svilland
+			campaign.
+			<h3>Languages</h3>
+			I speak Dutch and English fluently, and am in the process of learning professional level Swedish.
+			Officially, I have a B2 level in French, although much of that has decayed.
+			<h3>Cycling</h3>
+			I thoroughly enjoy cycling, my favorite route so far was Ume&aring; to Stockholm, cycling a significant
+			amount of Sweden's east coast.
+			<h1 id="CONTACT">CONTACT</h1>
+			erin(at)erinvanderveen.nl
+			<h1 id="LINKS">LINKS</h1>
+			<ul>
+				<li><a href="https://github.com/ErinvanderVeen">GitHub</a></li>
+				<li><a href="https://gitlab.com/ErinvanderVeen">GitLab</a></li>
+				<li><a href="https://www.linkedin.com/in/erin-van-der-veen-34b5a1133/">LinkedIn</a></li>
+			</ul>
+		</div>
+	</body>
+</html>
